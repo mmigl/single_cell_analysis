@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -q batch
+#PBS -l nodes=1:ppn=16
+#PBS -N SingleR
+#PBS -l walltime=24:00:00
+#PBS -l mem=100gb  
+#PBS -m abe
+#PBS -M mmigl@uic.edu
+#PBS -j oe
+#PBS -o SingleR.out
+ 
+
+module load R
+cd /home/mmigl
+Rscript singler.R

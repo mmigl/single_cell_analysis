@@ -1,0 +1,6 @@
+library(SingleR)
+library(SingleCellExperiment)
+reference <- readRDS("/home/mmigl/R/reference.rds")
+query <- readRDS("/home/mmigl/R/query.rds")
+annotations <- SingleR(test = query, ref = reference, labels = reference$celltype_major)
+saveRDS(annotations, file = "/home/mmigl/R/annotations.rds")
